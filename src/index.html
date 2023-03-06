@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>4post</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Post your comment</h1>
+    </header>
+    <main class="main">
+      <section id="conversation">
+        <div class="post">
+          <form class="post__form" action="">
+            <textarea
+              class="post__textarea"
+              cols="60"
+              rows="10"
+              placeholder="Присоединиться к обсуждению..."
+              name="textarea"
+              required
+            ></textarea>
+            <div class="post__bottom">
+              <input
+                class="post__input"
+                type="text"
+                name="name"
+                placeholder="Имя"
+                required
+              />
+              <input class="post__date" type="date" name="data" />
+              <button class="post__btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <ul class="post-list">
+          <img width=60 height=60 src='https://api.dicebear.com/5.x/pixel-art/svg?seed=${
+            post.name'
+          }/>
+          <!-- <li class="post-list__item">
+            <header class="post-list__header">
+              <div class="post-list__name">Гамид</div>
+              <div class="post-list__date">сегодня, 16:23</div>
+            </header>
+            <div class="post-list__body">Тут должен быть текст</div>
+            <footer class="post-list__footer">
+              <button class="post-list__btn">Удалить</button>
+              <button class="post-list__btn">Лайк</button>
+            </footer>
+          </li> -->
+          <!--
+  - имя
+- текст
+- дата, время добавления
+-- если текущая дата, пишем "сегодня, 16:23" (ключевое - слово сегодня, время подставляется)
+-- если вчерашняя дата, пишем "вчера, 18:39"
+- кнопка удаления комментария (иконка корзины) - при нажатии комментарий удаляется
+- сердечко лайка - при нажатии выставляется или убирается лайк -->
+        </ul>
+      </section>
+    </main>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>

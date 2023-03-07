@@ -126,10 +126,9 @@ window.onload = function () {
         <div class="post-list__content">
           <header class="post-list__header">
               <div class="post-list__name">${post.name}</div>
-              <div class="post-list__date">${getCorrectDate(
-                post.date,
-                post.time
-              )}</div>
+              <div class="post-list__date">${
+                post.date && getCorrectDate(post.date, post.time)
+              }</div>
           </header>
           <div class="post-list__body">${post.content}</div>
           <footer class="post-list__footer">

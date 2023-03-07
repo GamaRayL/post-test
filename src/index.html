@@ -23,6 +23,7 @@
               rows="10"
               placeholder="Присоединиться к обсуждению..."
               name="textarea"
+              autocomplete="off"
               required
             ></textarea>
             <div class="post__bottom">
@@ -31,6 +32,7 @@
                 type="text"
                 name="name"
                 placeholder="Имя"
+                autocomplete="off"
                 required
               />
               <input class="post__date" type="date" name="data" />
@@ -38,30 +40,7 @@
             </div>
           </form>
         </div>
-        <ul class="post-list">
-          <img width=60 height=60 src='https://api.dicebear.com/5.x/pixel-art/svg?seed=${
-            post.name'
-          }/>
-          <!-- <li class="post-list__item">
-            <header class="post-list__header">
-              <div class="post-list__name">Гамид</div>
-              <div class="post-list__date">сегодня, 16:23</div>
-            </header>
-            <div class="post-list__body">Тут должен быть текст</div>
-            <footer class="post-list__footer">
-              <button class="post-list__btn">Удалить</button>
-              <button class="post-list__btn">Лайк</button>
-            </footer>
-          </li> -->
-          <!--
-  - имя
-- текст
-- дата, время добавления
--- если текущая дата, пишем "сегодня, 16:23" (ключевое - слово сегодня, время подставляется)
--- если вчерашняя дата, пишем "вчера, 18:39"
-- кнопка удаления комментария (иконка корзины) - при нажатии комментарий удаляется
-- сердечко лайка - при нажатии выставляется или убирается лайк -->
-        </ul>
+        <ul class="post-list"></ul>
       </section>
     </main>
   </body>

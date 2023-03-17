@@ -31,6 +31,7 @@ window.onload = function () {
   list.addEventListener('click', likePost);
   btnStorage.addEventListener('click', clearStorage);
 
+  // Очистка постов из localstorage
   function clearStorage(e) {
     e.preventDefault();
     localStorage.clear();
